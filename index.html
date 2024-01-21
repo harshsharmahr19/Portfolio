@@ -16,6 +16,8 @@
 
 </head>
 <body>
+    <div id="preloader"></div>
+    
 <div id="header">
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
@@ -23,7 +25,7 @@
     
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="https://drive.google.com/file/d/1zQx2US5cgdVyaPdXdAx4R9uKRw0OZE2-/view?usp=drive_link"><img src="logo.png" class="logo1">Harsh<span>Sharma</span></a></div>
+            <div class="logo"><a href="#"><img src="logo.png" class="logo1">Harsh<span>Sharma</span></a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>  
                 <li><a href="#about" class="menu-btn">About</a></li>
@@ -93,9 +95,17 @@
             <div class="serv-content">
                 <div class="card">
                     <div class="box">
+                        <i class="fa-solid fa-code"></i>
+                        <div class="text">Web Developer</div>
+                        <p>Enthusiastic web developer, crafting digital experiences with a blend of creativity and code. Committed to seamless, user-centric designs and functionality.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
                         <i class="fas fa-edit"></i>
                         <div class="text">Photo Editing</div>
                         <p>Passionate photo editor with a love for transforming images.  I create captivating visuals that tell unique stories.</p>
+                        
                     </div>
                 </div>
                 <div class="card">
@@ -103,13 +113,6 @@
                         <i class="fas fa-video-camera"></i>
                         <div class="text">Video Editing</div>
                         <p>Passionate video editor with a flair for storytelling. Skilled in editing software, I craft compelling visuals to bring narratives to life.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fa-solid fa-code"></i>
-                        <div class="text">Web Developer</div>
-                        <p>Enthusiastic web developer, crafting digital experiences with a blend of creativity and code. Committed to seamless, user-centric designs and functionality.</p>
                     </div>
                 </div>
                </div>
@@ -238,7 +241,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
@@ -304,6 +307,11 @@
     </footer>
 
     <script src="script.js"></script>
-    
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load" , function(){
+            loader.style.display = "none";
+        })
+    </script>
 </body>
 </html>
