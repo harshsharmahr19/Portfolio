@@ -17,14 +17,16 @@ body{
     color: #fff;
 }
 #header {
-    background-image: url('background.png'); /* Replace with the path to your background image */
-    background-size: cover; /* Ensure the image covers the entire header */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Set text color to white or your desired color */
-    padding: 80px 0; /* Add padding as needed */
-    height: 100vh; /* Set a fixed height for your header or adjust as needed */
-    position: relative;
+  background-image: url('background.png'); /* Replace with the path to your background image */
+  background-size: cover; /* Ensure the image covers the entire header */
+  background-position: center; /* Center the background image */
+  color: #fff; /* Set text color to white or your desired color */
+  padding: 80px 0; /* Add padding as needed for larger screens */
+  height: 100vh; /* Set a fixed height for your header or adjust as needed for larger screens */
+  min-height: 500px; /* Set a minimum height for smaller screens */
+  position: relative;
 }
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -101,10 +103,11 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
-.navbar.sticky{
-    padding: 2px 0;
-    background: #FF5349;
-    margin-top: -80px;
+.navbar.sticky {
+  padding: 2px 0;
+  background-color:  rgba(0, 0, 0, 0.7); /* Change the alpha value (last parameter) to adjust the blur effect */
+  backdrop-filter: blur(10px); /* Change the blur radius to adjust the blur effect */
+  margin-top: -80px;
 }
 .navbar .max-width{
     display: flex;
@@ -149,7 +152,63 @@ section .title::after{
     color: #fff;
     background-color: #FF5349;
 }
+/*Welcome Message*/
+#popup {
+    position: fixed;
+    top: -50%; /* Start with negative top value to hide the pop-up initially */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    color: black;
+    transition: top 1.0s ease-out; /* Add transition effect to the top property */
+  }
+  
+  #popup.show {
+    top: 0; /* Move the pop-up to the top of the page when it has the "show" class */
+  }
 
+  
+  #ok-button {
+    background-color: crimson;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-out;
+  }
+  
+  #ok-button:hover {
+    background-color: crimson;
+    color: black;
+  }
+  
+  #ok-button:active {
+    background-color: crimson;
+    color: black;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add inset box-shadow on click */
+    transform: scale(0.9); /* Add this line to zoom out the button */
+    transition: transform 0.2s ease-out; /* Add this line to make the zoom out effect smooth */
+}
+  
+  .hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+  }
+  
+  
+  .show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
 
 /* menu btn styling */
