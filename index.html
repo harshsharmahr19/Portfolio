@@ -56,6 +56,13 @@
     </section>
 </div>
 
+<!-- /* Welcome Message -->
+<div id="popup" class="hide">
+    <h2>Welcome to My Portfolio Website!</h2>
+    <p>We're glad you're here! Enjoy exploring our site.</p>
+    <button id="ok-button">OK</button>
+  </div>
+
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
@@ -213,7 +220,7 @@
     <!-- teams section start -->
     <section class="teams" id="teams">
         <div class="max-width">
-            <h2 class="title">My teams</h2>
+            <h2 class="title">My team</h2>
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
@@ -312,6 +319,21 @@
         window.addEventListener("load" , function(){
             loader.style.display = "none";
         })
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  const popup = document.getElementById('popup');
+
+  // Display the pop-up after a short delay
+  setTimeout(function () {
+    popup.classList.add('show');
+  }, 0000);
+
+  // Hide the pop-up when the 'OK' button is clicked
+  document.getElementById('ok-button').addEventListener('click', function () {
+    popup.classList.remove('show');
+  });
+});
     </script>
 </body>
 </html>
