@@ -11,11 +11,16 @@
 
 html{
     scroll-behavior: smooth;
+    cursor: url('cursor.png'), auto;
 }
 body{
     background: #080808;
     color: #fff;
+   
 }
+    
+
+
 #header {
     background-image: url('background1.png');
     background-size: cover;
@@ -26,6 +31,7 @@ body{
     min-height: 500px;
     position: relative;
   }
+
   
   
 
@@ -256,6 +262,7 @@ section .title::after{
     width: 100%;
     height: 100vh;
     color: #fff;
+    
     font-family: 'Ubuntu', sans-serif;
 }
 .home .max-width {
@@ -311,14 +318,27 @@ section .title::after{
 .about .about-content .left img {
     width: 80%;
     border-radius: 15px;
-    transition: transform 0.5s, filter 0.5s; /* Add filter to transition */
-    filter: drop-shadow(0 4px 8px rgba(0,140,255)); /* Add drop-shadow */
- }
- 
- .about .about-content:hover img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 8px 16px rgba(0,140,255)); /* Adjust shadow on hover */
- }
+    transition: transform 0.5s, filter 0.5s, box-shadow 0.5s; /* Add box-shadow to transition */
+    box-shadow: 0 4px 8px rgba(0, 140, 255, 0.5); /* Add box-shadow */
+}
+.about-content .left img{
+    animation: imgg 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+@keyframes imgg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+
  
 .about .left .layer{
     width: 100%;
@@ -386,21 +406,84 @@ section .title::after{
     color: #FF5349;
     background: none;
 }
-.about .about-content .right .social-icons ul li{
-    display: inline-block;
-    
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    
-    margin-top: 20px;
-    border-radius: 1px;
-    border: 0px solid #FF5349;
-    transition: all 0.3s ease;
+
+/*Social media icon*/
+.column.right-2 {
+    overflow: hidden; /* Clear float */
 }
-.about .about-content .right .social-icons ul li:hover{
-    color: #FF5349;
-    background: none;
+
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align items to the end (right) */
+}
+
+.social-icons ul {
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for alignment */
+}
+
+.social-icons ul li {
+    margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-icons ul li:last-child {
+    margin-right: 0; /* Remove margin from last icon */
+}
+
+.social-icons ul li a {
+    display: inline-block;
+    width: 40px; /* Adjust size of icons */
+    height: 40px;
+    line-height: 40px; /* Centering vertically */
+    text-align: center; /* Centering horizontally */
+    border-radius: 50%; /* Make the icons circular */
+    color: #fff; /* Color of the icon */
+    font-size: 20px; /* Adjust icon size */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons ul li a img {
+    width: 100%; /* Make the images responsive */
+    max-width: 40px; /* Limit maximum width to 40px */
+    height: auto; /* Automatically adjust height */
+    border-radius: 5px; /* Make the images square with rounded corners */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    transition: all 0.6s ease-in-out; /* Add a smooth transition */
+}
+
+.social-icons ul li a img:hover {
+    transform: translateY(-10px) /* Increase size on hover */
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .social-icons {
+        justify-content: center; /* Center align icons on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .social-icons ul li {
+        margin-right: 5px; /* Adjust spacing between icons for smaller screens */
+    }
+}
+
+
+
+/* Style individual icons */
+.fa-linkedin:before {
+    content: "\f0e1"; /* LinkedIn icon */
+}
+
+.fa-instagram:before {
+    content: "\f16d"; /* Instagram icon */
+}
+
+.fa-twitter:before {
+    content: "\f099"; /* Twitter icon */
 }
 
 /* services section styling */
@@ -427,6 +510,22 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.services .serv-content .card{
+    animation: imgg 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+@keyframes imgg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .services .serv-content .card:hover{
     background: #FF5349;
 }
@@ -616,6 +715,21 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 }
+.teams .carousel .card{
+    animation: imgg 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+@keyframes imgg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-22px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 .teams .carousel .card:hover{
     background: #FF5349;
 }
@@ -799,6 +913,7 @@ footer span a:hover{
         height: auto;
         width: 350px;
     }
+    
 }
 
 @media (max-width: 991px) {
