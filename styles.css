@@ -7,6 +7,19 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+:root{
+   --primary-color:#000;
+    --secondary-color:#fff;
+    --black-blur-color: rgba(0, 0, 0, 0.7);
+    --grey-color:#222
+}
+.dark-theme{   
+    --primary-color:#fff;
+    --secondary-color:#000;
+    --black-blur-color:rgba(255, 255, 255, 0.7);
+    --grey-color:#f1f1f1
+   
+}
 
 
 html{
@@ -14,21 +27,30 @@ html{
     cursor: url('cursor.png'), auto;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: var( --primary-color);
+    color: var(--secondary-color);
    
 }
     
-
+#icon{
+    margin-top: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+.navbar .menu{
+    flex: 1;
+    text-align: right;
+}
 
 #header {
-    background-image: url('background1.png');
-    background-size: cover;
+    background-image: url('me.png');
+    background-size: contain;
     background-position: center;
-    color: #fff;
+    background-repeat: no-repeat;
+    color: var(--secondary-color);
     padding: 80px 0;
     height: 100vh;
-    min-height: 500px;
+    min-height: 100vh;
     position: relative;
   }
 
@@ -47,7 +69,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--primary-color);
 }
 
 /* all similar content styling codes */
@@ -87,7 +109,7 @@ section .title::before{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: var(--primary-color);
     transform: translateX(-50%);
 }
 section .title::after{
@@ -95,9 +117,9 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color:  black;
+    color:  var( --primary-color);
     padding: 0 5px;
-    background: #fff;
+    background: var(--secondary-color);
     transform: translateX(-50%);
 }
 
@@ -113,7 +135,7 @@ section .title::after{
 }
 .navbar.sticky {
   padding: 2px 0;
-  background-color:  rgba(0, 0, 0, 0.7); /* Change the alpha value (last parameter) to adjust the blur effect */
+  background-color:  var(--black-blur-color); /* Change the alpha value (last parameter) to adjust the blur effect */
   backdrop-filter: blur(10px); /* Change the blur radius to adjust the blur effect */
   margin-top: -80px;
 }
@@ -130,7 +152,7 @@ section .title::after{
 .navbar .logo a{
     display: flex;
     margin-top: 50px;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 35px;
     font-weight: 600;
 }
@@ -139,7 +161,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
-    color: #fff;
+    color: var(--secondary-color);
 }
 .navbar .menu li{
     list-style: none;
@@ -147,7 +169,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -157,7 +179,7 @@ section .title::after{
     color: #FF5349;
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: var(--secondary-color);
     background-color: #FF5349;
 }
 /*Welcome Message*/
@@ -173,7 +195,7 @@ section .title::after{
     z-index: 1000;
     width: 400px;
     text-align: center;
-    color: black;
+    color: var(--primary-color);
     transition: top 1.0s ease-out; /* Add transition effect to the top property */
   }
   
@@ -184,7 +206,7 @@ section .title::after{
   
   #ok-button {
     background-color: crimson;
-    color: white;
+    color: var(--secondary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -195,13 +217,13 @@ section .title::after{
   
   #ok-button:hover {
     background-color: crimson;
-    color: black;
+    color: var(--primary-color);
   }
   
   #ok-button:active {
     background-color: crimson;
-    color: black;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add inset box-shadow on click */
+    color: var(--primary-color);
+    box-shadow: inset 0px 0px 5px var(--black-blur-color); /* Add inset box-shadow on click */
     transform: scale(0.9); /* Add this line to zoom out the button */
     transition: transform 0.2s ease-out; /* Add this line to make the zoom out effect smooth */
 }
@@ -221,7 +243,7 @@ section .title::after{
 
 /* menu btn styling */
 .menu-btn{
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 23px;
     cursor: pointer;
     display: none;
@@ -236,7 +258,7 @@ section .title::after{
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color: var(--secondary-color);
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -261,7 +283,7 @@ section .title::after{
     display: flex;
     width: 100%;
     height: 100vh;
-    color: #fff;
+    color: var(--secondary-color);
     
     font-family: 'Ubuntu', sans-serif;
 }
@@ -291,7 +313,7 @@ section .title::after{
 .home .home-content a {
     display: inline-block;
     background: #FF5349;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -346,7 +368,7 @@ section .title::after{
     font-size: 20px;
     font-weight: 500;
     color: #f1f1f1;
-    background: linear-gradient(rgba(0,0,0,0.4),#FF5349);
+    background: linear-gradient(var(--black-blur-color),#FF5349);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -370,7 +392,7 @@ section .title::after{
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--secondary-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -393,7 +415,7 @@ section .title::after{
 .about .about-content .right a{
     display: inline-block;
     background: #FF5349;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -413,8 +435,17 @@ section .title::after{
 }
 
 .social-icons {
+    padding-top: 50px;
+    position: relative; /* Set the parent container to relative positioning */
     display: flex; /* Use flexbox for alignment */
     justify-content: flex-end; /* Align items to the end (right) */
+}
+
+.social-icons h4 {
+    position: absolute; /* Position the heading absolutely */
+    top: 0; /* Position the heading at the top of the parent container */
+    left: 0; /* Position the heading at the left of the parent container */
+    margin: 0; /* Remove any default margin */
 }
 
 .social-icons ul {
@@ -440,7 +471,7 @@ section .title::after{
     line-height: 40px; /* Centering vertically */
     text-align: center; /* Centering horizontally */
     border-radius: 50%; /* Make the icons circular */
-    color: #fff; /* Color of the icon */
+    color: var(--secondary-color); /* Color of the icon */
     font-size: 20px; /* Adjust icon size */
     transition: background-color 0.3s ease;
 }
@@ -455,8 +486,9 @@ section .title::after{
 }
 
 .social-icons ul li a img:hover {
-    transform: translateY(-10px) /* Increase size on hover */
+    transform: translateY(-10px); /* Increase size on hover */
 }
+
 
 /* Media queries */
 @media only screen and (max-width: 768px) {
@@ -488,22 +520,22 @@ section .title::after{
 
 /* services section styling */
 .services, .teams{
-    color:#fff;
-    background: #111;
+    color:var(--secondary-color);
+    background: var(--primary-color);
 }
 .services .title::before,
 .teams .title::before{
-    background: #fff;
+    background: var(--secondary-color);
 }
 .services .title::after,
 .teams .title::after{
-    background: #f1f1f1;
+    
     content: "what i provide";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
     height: 40vh;
-    background: #222;
+    background: var(--grey-color);
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -541,7 +573,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
-    color: #fff;
+    color: var(--secondary-color);
 }
 .services .serv-content .card .text{
     font-size: 25px;
@@ -550,11 +582,11 @@ section .title::after{
 }
 /*portfolio*/
 #portfolio{
-    background-color:#111;
+    background-color:var(--primary-color);
     padding: 50px 0;
 }
 .portfolio .title{
-    color: #f1f1f1;
+   
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -587,8 +619,8 @@ section .title::after{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 500;
-    color: #f1f1f1;
-    background: linear-gradient(rgba(0,0,0,0.4),#FF5349);
+    color: var(--secondary-color);
+    background: linear-gradient(var(--black-blur-color),#FF5349);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -615,7 +647,7 @@ section .title::after{
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: #fff;
+    background: var(--secondary-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -646,7 +678,7 @@ section .title::after{
 .skills .skills-content .left a{
     display: inline-block;
     background: #FF5349;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
@@ -705,10 +737,10 @@ section .title::after{
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
-    color: #111;
+    color: var(--primary-color);
 }
 .teams .carousel .card{
-    background: #222;
+    background: var(--primary-color);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -757,7 +789,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
-    border-color: #fff;
+    border-color: var(--secondary-color);
 }
 .owl-dots{
     text-align: center;
@@ -859,7 +891,7 @@ section .title::after{
   align-items: center;
 }
 .right form .button-area button{
-  color: #fff;
+  color: var(--secondary-color);
   display: block;
   width: 160px!important;
   height: 45px;
@@ -884,7 +916,7 @@ section .title::after{
 margin-top:10px;
 font-size:13px;
 background:#E5D669;
-color:#ffffff;
+color:var(--secondary-color);
 width:250px;
 padding:3px;
 display:none;
@@ -893,9 +925,9 @@ display:none;
 
 /* footer section styling */
 footer{
-    background: #111;
+    background: var(--primary-color);
     padding: 15px 23px;
-    color: #fff;
+    color: var(--secondary-color);
     text-align: center;
 }
 footer span a{
@@ -940,7 +972,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: var(--primary-color);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -1069,6 +1101,9 @@ footer span a:hover{
         height: 60px;
         margin-top: -15px;
     }
+    .home{
+        margin-top: 90px;
+    }
     .home .home-content .text-1{
         margin-top: -200px;
         font-size: 25px;
@@ -1114,7 +1149,7 @@ footer span a:hover{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #000 url(loder1.gif) no-repeat center center;
+    background: var(--primary-color) url(loder1.gif) no-repeat center center;
     background-size: 10%;
     z-index: 100;
 }
