@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <script src="https://kit.fontawesome.com/161af2ddcd.js" crossorigin="anonymous"></script>
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="c835c9eb-ed59-47e0-8a64-72c5f835d0cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -36,6 +39,7 @@
                 <li><a href="#teams" class="menu-btn">Teams</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
+            <img src="sun.png" id="icon">
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
@@ -45,7 +49,9 @@
 
     <!-- home section start -->
     <section class="home" id="home">
-        <div class="max-width">
+        <div class="max-width" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Harsh Sharma</div>
@@ -65,24 +71,28 @@
 
     <!-- about section start -->
     <section class="about" id="about">
-        <div class="max-width">
+        <div class="max-width" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
             <h2 class="title">About me</h2>
             <div class="about-content">
-                <div class="column left">
+                <div class="column left" data-aos="fade-right">
                     <img src="me4.png">
     
                 </div>
                 
                 
                 
-                <div class="column right">
+                <div class="column right" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="text">I'm Harsh Sharma and I'm a <span class="typing-2">Web Developer</span></div>
                     <p>Hello there! I'm Harsh Sharma, a passionate web developer currently pursuing my Bachelor of Computer Applications (BCA). My journey in the world of technology began with a profound curiosity, and it has since evolved into a dedicated pursuit of excellence in web development.</p>
                     <a href="https://drive.google.com/file/d/1WJ-5ek-79qV-C9HlXeLTcRIHJe2ROTO3/view" target="_blank">Download CV &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-download"></i></a>
                     
                 </div>
                 
-                    <div class="social-icons">
+                    <div class="social-icons" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
+                        <h4>Social Icons</h4>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/harsh-sharma-9b14a124b/" target="_blank"><img src="linkedin.png"></a></li>
                             <li><a href="https://www.instagram.com/harshsharmahr19/?hl=en" target="_blank"><img src="instagram.png"></a></li>
@@ -103,14 +113,14 @@
             <h2 class="title">My services</h2>
             <div class="serv-content">
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="zoom-in">
                         <i class="fa-solid fa-code"></i>
                         <div class="text">Web Developer</div>
                         <p>Passionate web developer creating user-centric digital experiences with creativity and code</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="zoom-in">
                         <i class="fas fa-edit"></i>
                         <div class="text">Photo Editing</div>
                         <p>Passionate photo editor with a love for transforming images.  I create captivating visuals that tell unique stories.</p>
@@ -118,7 +128,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="zoom-in">
                         <i class="fas fa-video-camera"></i>
                         <div class="text">Video Editing</div>
                         <p>Passionate video editor with a flair for storytelling. Skilled in editing software, I craft compelling visuals to bring narratives to life.</p>
@@ -133,8 +143,9 @@
     <div class="portfolio" id="portfolio">
         <div class="max-width">
             <h1 class="title">Portfolio</h1>
-            <div class="work-list">
-                <div class="work">
+            <div class="work-list" >
+                <div class="work" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <img src="work1.jfif">
                     <div class="layer">
                         <h3>whatsapp</h3>
@@ -142,7 +153,8 @@
                         <a href="https://api.whatsapp.com/send/?phone=919053945755&text&type=phone_number&app_absent=0"target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <img src="work2.jfif" height="495" >
                     <div class="layer">
                         <h3>Projects</h3>
@@ -150,7 +162,8 @@
                         <a href="https://newscomrade.in/ "target="_blank"><i class="fa-solid fa-laptop-code"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <img src="work3.jfif" height="495">
                     <div class="layer">
                         <h3>My course</h3>
@@ -164,10 +177,12 @@
 
     <!-- skills section start -->
     <section class="skills" id="skills">
-        <div class="max-width">
+        <div class="max-width" data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
             <h2 class="title">My skills</h2>
             <div class="skills-content">
-                <div class="column left">
+                <div class="column left" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">
                     <div class="text">My creative skills & experiences.</div>
                     <p>Proficient in HTML, CSS, JavaScript, and PHP, I weave dynamic web experiences. Currently expanding my skills into SQL, aiming to integrate robust database solutions. Passionate about creating responsive, visually appealing websites with a focus on functionality and user experience.
 
@@ -178,36 +193,41 @@
                     </p>
                     <a href="#">Read more</a>
                 </div>
-                <div class="column right">
-                    <div class="bars">
+                <div class="column right" >
+                    <div class="bars" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="info">
                             <span>HTML</span>
                             <span>90%</span>
                         </div>
                         <div class="line html"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="info">
                             <span>CSS</span>
                             <span>80%</span>
                         </div>
                         <div class="line css"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="info">
                             <span>JavaScript</span>
                             <span>80%</span>
                         </div>
                         <div class="line js"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="info">
                             <span>PHP</span>
                             <span>30%</span>
                         </div>
                         <div class="line php"></div>
                     </div>
-                    <div class="bars">
+                    <div class="bars" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <div class="info">
                             <span>MySQL</span>
                             <span>20%</span>
@@ -225,21 +245,21 @@
             <h2 class="title">My team</h2>
             <div class="carousel owl-carousel">
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="flip-left">
                         <img src="team2.png" alt="">
                         <div class="text">Sachin Yadav</div>
                         <p>Sachin, a skilled web developer specializing in WordPress, contributes expertise to our team. Dedicated to crafting dynamic and engaging websites.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="flip-left">
                         <img src="team.png" alt="">
                         <div class="text">Vinit Gour</div>
                         <p>Vinit, a talented web developer on our team, excels in creating innovative online solutions. His skills enhance our collaborative efforts seamlessly.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="box">
+                    <div class="box" data-aos="flip-left">
                         <img src="sachinchauhan.jpeg" alt="">
                         <div class="text">Sachin Chauhan</div>
                         <p>Sachin Chauhan, a proficient web developer in our team, elevates projects with his expertise, ensuring cutting-edge and effective digital solutions.</p>
@@ -336,6 +356,21 @@
     popup.classList.remove('show');
   });
 });
+    </script>
+    <script>
+        var icon = document.getElementById("icon");
+        
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src="moon.png";
+            }else{
+                icon.src="sun.png";
+            }
+        }
+    </script>
+    <script>
+        AOS.init();
     </script>
     
 </body>
