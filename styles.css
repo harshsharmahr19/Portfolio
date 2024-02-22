@@ -11,15 +11,22 @@
    --primary-color:#000;
     --secondary-color:#fff;
     --black-blur-color: rgba(0, 0, 0, 0.7);
-    --grey-color:#222
+    --grey-color:#222;
+     
+    
+    
 }
-.dark-theme{   
-    --primary-color:#fff;
-    --secondary-color:#000;
-    --black-blur-color:rgba(255, 255, 255, 0.7);
-    --grey-color:#f1f1f1
+.dark-theme {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --black-blur-color: rgba(255, 255, 255, 0.7);
+    --grey-color: #f1f1f1;
    
-}
+   
+    
+    
+  }
+  
 
 
 html{
@@ -34,7 +41,7 @@ body{
     
 #icon{
     margin-top: 20px;
-    width: 30px;
+    width: 50px;
     cursor: pointer;
 }
 .navbar .menu{
@@ -42,18 +49,28 @@ body{
     text-align: right;
 }
 
-#header {
-    background-image: url('me.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+}
+
+
+  
+  
+  #header {
     color: var(--secondary-color);
     padding: 80px 0;
     height: 100vh;
     min-height: 100vh;
     position: relative;
   }
-
+  
   
   
 
