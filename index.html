@@ -22,45 +22,52 @@
 <body>
     <div id="preloader"></div>
     
-<div id="header">
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#"><img src="logo.png" class="logo1">Harsh<span>Sharma</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>  
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#portfolio" class="menu-btn">Portfolio</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Teams</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <img src="sun.png" id="icon">
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-        </div>
-    </nav>
-
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width" data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Harsh Sharma</div>
-                <div class="text-3">And I'm a <span class="typing">Web Developer</span></div>
-                <a href="#contact">Hire me</a>
-            </div>
-        </div>
-    </section>
-</div>
+    <video autoplay muted loop id="video-background">
+        <source src="background12.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <div id="header">
+          <div class="scroll-up-btn">
+              <i class="fas fa-angle-up"></i>
+          </div>
+          
+          <nav class="navbar">
+              <div class="max-width">
+                  <div class="logo"><a href="#"><img src="logo.png" class="logo1">Harsh<span>Sharma</span></a></div>
+                  <ul class="menu">
+                      <li><a href="#home" class="menu-btn">Home</a></li>  
+                      <li><a href="#about" class="menu-btn">About</a></li>
+                      <li><a href="#services" class="menu-btn">Services</a></li>
+                      <li><a href="#portfolio" class="menu-btn">Portfolio</a></li>
+                      <li><a href="#skills" class="menu-btn">Skills</a></li>
+                      <li><a href="#teams" class="menu-btn">Teams</a></li>
+                      <li><a href="#contact" class="menu-btn">Contact</a></li>
+                  </ul>
+                  <img src="lightmode.png" id="icon" onclick="toggleMode()" alt="Theme Toggle" >
+                 
+                  <div class="menu-btn">
+                      <i class="fas fa-bars"></i>
+                  </div>
+                  
+              </div>
+          </nav>
+      
+          <!-- home section start -->
+          <section class="home" id="home">
+              <div class="max-width" data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500">
+                  <div class="home-content">
+                      <div class="text-1">Hello, my name is</div>
+                      <div class="text-2">Harsh Sharma</div>
+                      <div class="text-3">And I'm a <span class="typing">Web Developer</span></div>
+                      <a href="#contact">Hire me</a>
+                  </div>
+              </div>
+          </section>
+      </div>
+      
 
 <!-- /* Welcome Message -->
 <div id="popup" class="hide">
@@ -357,18 +364,22 @@
   });
 });
     </script>
-    <script>
-        var icon = document.getElementById("icon");
-        
-        icon.onclick = function(){
-            document.body.classList.toggle("dark-theme");
-            if(document.body.classList.contains("dark-theme")){
-                icon.src="moon.png";
-            }else{
-                icon.src="sun.png";
-            }
+   <script>
+    var icon = document.getElementById("icon");
+    var video = document.getElementById("video-background");
+    
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "nightmode.png";
+            video.src = "background15.mp4"; // Change to dark mode video source
+        } else {
+            icon.src = "lightmode.png";
+            video.src = "background12.mp4"; // Change to light mode video source
         }
-    </script>
+    }
+</script>
+
     <script>
         AOS.init();
     </script>
