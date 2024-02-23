@@ -974,6 +974,9 @@ footer span a:hover{
         height: 100px;
         margin-top: -15px;
     }
+    .navbar .logo a{
+        margin-left: -10px;
+    }
 }
 @media (max-width: 947px){
     .menu-btn{
@@ -998,6 +1001,10 @@ footer span a:hover{
         width: 80px;
         height: 80px;
         margin-top: -15px;
+        margin-left: -10px;
+    }
+    .navbar .logo a{
+        margin-left: -10px;
     }
     .navbar .menu.active{
         left: 0;
@@ -1055,6 +1062,10 @@ footer span a:hover{
         width: 60px;
         height: 60px;
         margin-top: -15px;
+        margin-left: -10px;
+    }
+    .navbar .logo a{
+        margin-left: -10px;
     }
 
   
@@ -1087,6 +1098,10 @@ footer span a:hover{
         width: 60px;
         height: 60px;
         margin-top: -15px;
+        margin-left: -10px;
+    }
+    .navbar .logo a{
+        margin-left: -10px;
     }
     .max-width{
         padding: 0 23px;
@@ -1117,6 +1132,9 @@ footer span a:hover{
         width: 60px;
         height: 60px;
         margin-top: -15px;
+        margin-left: -10px;
+    }
+    .navbar .logo a{
         margin-left: -10px;
     }
     .home{
